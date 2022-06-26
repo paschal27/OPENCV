@@ -1,6 +1,6 @@
 import cv2 as cv
 
-img = cv.imread('Photos/cat_large.jpg')
+img = cv.imread('Photos/1.jpg')
 
 cv.imshow('Cat', img)
 
@@ -13,22 +13,23 @@ def rescaleFrame(frame, scale=0.1):
 
 resized_image = rescaleFrame(img)
 cv.imshow('IMAGE', resized_image)
+cv.waitKey(0)
 
-def changeRes(width,height):
-    capture.set(3,width)
-    capture.set(4,height)
+# def changeRes(width,height):
+#     capture.set(3,width)
+#     capture.set(4,height)
     
-capture = cv.VideoCapture('Videos/dog.mp4')
+# capture = cv.VideoCapture('Videos/dog.mp4')
 
-while True:
-    isTrue, frame = capture.read()
+# while True:
+#     isTrue, frame = capture.read()
 
-    frame_resized = rescaleFrame(frame)
+#     frame_resized = rescaleFrame(frame)
 
-    cv.imshow('Video', frame)
-    cv.imshow('video Resized', frame_resized)
-    if cv.waitKey(20) & 0xFF==ord('d'):
-        break
+#     cv.imshow('Video', frame)
+#     cv.imshow('video Resized', frame_resized)
+#     if cv.waitKey(20) & 0xFF==ord('d'):
+#         break
 
-capture.release()
-cv.destroyAllWindows()
+# capture.release()
+# cv.destroyAllWindows()
